@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SistemaFlavorsThatInspire.Models.StatusDaEntrega>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataSaida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataEntrega)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario.UsuarioId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pedido.PedidoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataSaida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataEntrega)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.StatusDaEntregaId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.StatusDaEntregaId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.StatusDaEntregaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
