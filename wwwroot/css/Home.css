@@ -1,0 +1,13 @@
+﻿body {
+    background-image: url(/imagem/FundoHome.jpg);
+    background-size: cover;
+}
+
+.display-4 {
+    color: black;
+    text-align: center;
+    margin-top: 14rem;
+    margin-right: 0.5rem;
+    font-family: cursive;
+    font-size: 40px;
+}

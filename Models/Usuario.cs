@@ -25,7 +25,7 @@ namespace SistemaFlavorsThatInspire.Models
 
         [Column("Telefone")]
         [Display(Name = "Telefone")]
-        public int Telefone { get; set; }
+        public string Telefone { get; set; }
 
         [Column("Senha")]
         [Display(Name = "Senha")]

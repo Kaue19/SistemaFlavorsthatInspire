@@ -49,7 +49,7 @@ namespace SistemaFlavorsThatInspire.Controllers
         public IActionResult Create()
         {
             ViewData["PedidoId"] = new SelectList(_context.Pedido, "PedidoId", "PedidoId");
-            ViewData["ProdutoId"] = new SelectList(_context.Produto, "ProdutoId", "ProdutoId");
+            ViewData["ProdutoId"] = new SelectList(_context.Produto, "ProdutoId", "ProdutoNome");
             return View();
         }
 
@@ -67,7 +67,7 @@ namespace SistemaFlavorsThatInspire.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["PedidoId"] = new SelectList(_context.Pedido, "PedidoId", "PedidoId", pedidoProduto.PedidoId);
-            ViewData["ProdutoId"] = new SelectList(_context.Produto, "ProdutoId", "ProdutoId", pedidoProduto.ProdutoId);
+            ViewData["ProdutoId"] = new SelectList(_context.Produto, "ProdutoId", "ProdutoNome", pedidoProduto.ProdutoId);
             return View(pedidoProduto);
         }
 
@@ -85,7 +85,7 @@ namespace SistemaFlavorsThatInspire.Controllers
                 return NotFound();
             }
             ViewData["PedidoId"] = new SelectList(_context.Pedido, "PedidoId", "PedidoId", pedidoProduto.PedidoId);
-            ViewData["ProdutoId"] = new SelectList(_context.Produto, "ProdutoId", "ProdutoId", pedidoProduto.ProdutoId);
+            ViewData["ProdutoId"] = new SelectList(_context.Produto, "ProdutoId", "ProdutoNome", pedidoProduto.ProdutoId);
             return View(pedidoProduto);
         }
 
@@ -122,7 +122,7 @@ namespace SistemaFlavorsThatInspire.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["PedidoId"] = new SelectList(_context.Pedido, "PedidoId", "PedidoId", pedidoProduto.PedidoId);
-            ViewData["ProdutoId"] = new SelectList(_context.Produto, "ProdutoId", "ProdutoId", pedidoProduto.ProdutoId);
+            ViewData["ProdutoId"] = new SelectList(_context.Produto, "ProdutoId", "ProdutoNome", pedidoProduto.ProdutoId);
             return View(pedidoProduto);
         }
 

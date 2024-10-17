@@ -5,6 +5,30 @@
       "PackagePath": "staticwebassets\\SistemaFlavorsThatInspire.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Aluno\\Desktop\\Sprint 4\\SistemaFlavorsThatInspire\\wwwroot\\Imagem\\FundoHome.jpg",
+      "PackagePath": "staticwebassets\\Imagem\\FundoHome.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Aluno\\Desktop\\Sprint 4\\SistemaFlavorsThatInspire\\wwwroot\\Imagem\\Logo.png",
+      "PackagePath": "staticwebassets\\Imagem\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Aluno\\Desktop\\Sprint 4\\SistemaFlavorsThatInspire\\wwwroot\\Imagem\\fundohomee.jpg",
+      "PackagePath": "staticwebassets\\Imagem\\fundohomee.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Aluno\\Desktop\\Sprint 4\\SistemaFlavorsThatInspire\\wwwroot\\Imagem\\fundoohome.jpg",
+      "PackagePath": "staticwebassets\\Imagem\\fundoohome.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Aluno\\Desktop\\Sprint 4\\SistemaFlavorsThatInspire\\wwwroot\\Imagem\\homefundo.jpg",
+      "PackagePath": "staticwebassets\\Imagem\\homefundo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Aluno\\Desktop\\Sprint 4\\SistemaFlavorsThatInspire\\wwwroot\\css\\Home.css",
+      "PackagePath": "staticwebassets\\css\\Home.css"
+    },
+    {
       "Id": "C:\\Users\\Aluno\\Desktop\\Sprint 4\\SistemaFlavorsThatInspire\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

@@ -1,22 +1,100 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    font-family: FreeMono, monospace;
+}
+
+.navbar {
+    background-color: #FC5849 !important;
+}
+
+.logo {
+    width: 90px;
+    height: 70px;
+}
+
+.btn-primary {
+    margin: 5px;
+    background: none !important;
+    color: #F5C185 !important;
+    border: 2px #F5C185 solid !important;
+    border-radius: 4px !important;
+    padding: 0.150rem 0.250rem !important;
+}
+
+    .btn-primary:hover {
+        background-color: #F5C185 !important;
+        color: white !important;
+    }
+
+.btn-segundo {
+    margin: 5px;
+    background: none !important;
+    color: #dc3545 !important;
+    border: 2px #dc3545 solid !important;
+    border-radius: 4px !important;
+    padding: 0.150rem 0.250rem !important;
+}
+
+    .btn-segundo:hover {
+        background-color: #dc3545 !important;
+        color: white !important;
+        border: 2px #dc3545 solid !important;
+    }
+
+.input-validation-error {
+    border-radius: 5px !important;
+    border: 1px solid #8FBDDF;
+    height: 37.5px;
+}
+
+.btn-danger {
+    margin: 5px;
+    background: none !important;
+    color: #dc3545 !important;
+    border: 2px #dc3545 solid !important;
+    border-radius: 4px !important;
+    padding: 0.150rem 0.250rem !important;
+}
+
+    .btn-danger:hover {
+        background-color: #dc3545 !important;
+        color: white !important;
+    }
+
+.table {
+    font-size: 16px;
+}
+
+.img-geral {
+    width: 213px;
+    height: 158px;
+    margin: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.text-muted {
+    background-color: #FC5849 !important;
+    text-align: center;
+    color: black !important
+}
+.nav-item{
+    margin-left: 40px;
+    margin-right: 50px;
 }

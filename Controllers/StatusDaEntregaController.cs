@@ -49,7 +49,7 @@ namespace SistemaFlavorsThatInspire.Controllers
         public IActionResult Create()
         {
             ViewData["PedidoId"] = new SelectList(_context.Pedido, "PedidoId", "PedidoId");
-            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "UsuarioId");
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "NomeUsuario");
             return View();
         }
 
@@ -67,7 +67,7 @@ namespace SistemaFlavorsThatInspire.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["PedidoId"] = new SelectList(_context.Pedido, "PedidoId", "PedidoId", statusDaEntrega.PedidoId);
-            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "UsuarioId", statusDaEntrega.UsuarioId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "NomeUsuario", statusDaEntrega.UsuarioId);
             return View(statusDaEntrega);
         }
 
@@ -85,7 +85,7 @@ namespace SistemaFlavorsThatInspire.Controllers
                 return NotFound();
             }
             ViewData["PedidoId"] = new SelectList(_context.Pedido, "PedidoId", "PedidoId", statusDaEntrega.PedidoId);
-            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "UsuarioId", statusDaEntrega.UsuarioId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "NomeUsuario", statusDaEntrega.UsuarioId);
             return View(statusDaEntrega);
         }
 
@@ -122,7 +122,7 @@ namespace SistemaFlavorsThatInspire.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["PedidoId"] = new SelectList(_context.Pedido, "PedidoId", "PedidoId", statusDaEntrega.PedidoId);
-            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "UsuarioId", statusDaEntrega.UsuarioId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "NomeUsuario", statusDaEntrega.UsuarioId);
             return View(statusDaEntrega);
         }
 

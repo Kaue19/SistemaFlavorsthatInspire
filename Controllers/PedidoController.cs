@@ -47,7 +47,7 @@ namespace SistemaFlavorsThatInspire.Controllers
         // GET: Pedido/Create
         public IActionResult Create()
         {
-            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "UsuarioId");
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "NomeUsuario");
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace SistemaFlavorsThatInspire.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "UsuarioId", pedido.UsuarioId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "NomeUsuario", pedido.UsuarioId);
             return View(pedido);
         }
 
@@ -81,7 +81,7 @@ namespace SistemaFlavorsThatInspire.Controllers
             {
                 return NotFound();
             }
-            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "UsuarioId", pedido.UsuarioId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "NomeUsuario", pedido.UsuarioId);
             return View(pedido);
         }
 
@@ -117,7 +117,7 @@ namespace SistemaFlavorsThatInspire.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "UsuarioId", pedido.UsuarioId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "UsuarioId", "NomeUsuario", pedido.UsuarioId);
             return View(pedido);
         }
 

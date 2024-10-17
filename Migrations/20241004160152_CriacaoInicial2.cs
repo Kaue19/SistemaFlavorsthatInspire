@@ -33,7 +33,7 @@ namespace SistemaFlavorsThatInspire.Migrations
                     NomeUsuario = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Endereco = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Telefone = table.Column<int>(type: "int", nullable: false),
+                    Telefone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Senha = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ConfirmarSenha = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
