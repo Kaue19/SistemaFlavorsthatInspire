@@ -19,11 +19,19 @@ namespace SistemaFlavorsThatInspire.Controllers
         }
 
         // GET: Categoria
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string pesquisa)
         {
-              return _context.Categoria != null ? 
-                          View(await _context.Categoria.ToListAsync()) :
-                          Problem("Entity set 'Contexto.Categoria'  is null.");
+            if (pesquisa == null)
+            {
+                var contexto = _context.Categoria;
+                return View(await contexto.ToListAsync());
+            }
+            else
+            {
+                var contexto = _context.Categoria
+                                 .Where(t => t.CategoriaNome.Contains(pesquisa));
+                return View(await contexto.ToListAsync());
+            }
         }
 
         // GET: Categoria/Details/5

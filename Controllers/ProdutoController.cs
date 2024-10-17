@@ -19,10 +19,19 @@ namespace SistemaFlavorsThatInspire.Controllers
         }
 
         // GET: Produto
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string pesquisa)
         {
-            var contexto = _context.Produto.Include(p => p.Categoria);
-            return View(await contexto.ToListAsync());
+            if (pesquisa == null)
+            {
+                var contexto = _context.Produto.Include(t => t.Categoria);
+                return View(await contexto.ToListAsync());
+            }
+            else
+            {
+                var contexto = _context.Produto.Include(t => t.Categoria)
+                                                               .Where(t => t.ProdutoNome.Contains(pesquisa));
+                return View(await contexto.ToListAsync());
+            }
         }
 
         // GET: Produto/Details/5

@@ -19,10 +19,23 @@ namespace SistemaFlavorsThatInspire.Controllers
         }
 
         // GET: StatusDaEntrega
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string pesquisa)
         {
-            var contexto = _context.StatusDaEntrega.Include(s => s.Pedido).Include(s => s.Usuario);
-            return View(await contexto.ToListAsync());
+            if (pesquisa == null)
+            {
+                var contexto = _context.StatusDaEntrega.Include(t => t.Pedido)
+                                                               .Include(t => t.Usuario)
+                                                               .Include(t => t.Pedido);
+                return View(await contexto.ToListAsync());
+            }
+            else
+            {
+                var contexto = _context.StatusDaEntrega.Include(t => t.Pedido)
+                                                               .Include(t => t.Usuario)
+                                                               .Include(t => t.Pedido)                                                               
+                                                               .Where(t => t.Usuario.NomeUsuario.Contains(pesquisa));
+                return View(await contexto.ToListAsync());
+            }
         }
 
         // GET: StatusDaEntrega/Details/5
