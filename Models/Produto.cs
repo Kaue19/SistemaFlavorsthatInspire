@@ -19,6 +19,12 @@ namespace SistemaFlavorsThatInspire.Models
         [Display(Name = "Produto Descrição")]
         public string ProdutoDescricao { get; set; } = string.Empty;
 
+        [Column("ProdutoFoto")]
+        [Display(Name = "Produto Foto")]
+        public string ProdutoFoto { get; set; } = string.Empty;
+
+
+
         [Column("ProdutoPreco")]
         [Display(Name = "Produto Preço")]
         public double ProdutoPreco { get; set; }

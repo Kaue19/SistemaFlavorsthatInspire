@@ -65,7 +65,7 @@ namespace SistemaFlavorsThatInspire.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProdutoId,ProdutoNome,ProdutoDescricao,ProdutoPreco,CategoriaId,ProdutoDesconto")] Produto produto)
+        public async Task<IActionResult> Create([Bind("ProdutoId,ProdutoNome, ProdutoFoto, ProdutoDescricao,ProdutoPreco,CategoriaId,ProdutoDesconto")] Produto produto)
         {
             if (ModelState.IsValid)
             {
@@ -99,7 +99,7 @@ namespace SistemaFlavorsThatInspire.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProdutoId,ProdutoNome,ProdutoDescricao,ProdutoPreco,CategoriaId,ProdutoDesconto")] Produto produto)
+        public async Task<IActionResult> Edit(int id, [Bind("ProdutoId, ProdutoNome, ProdutoFoto,ProdutoDescricao,ProdutoPreco,CategoriaId,ProdutoDesconto")] Produto produto)
         {
             if (id != produto.ProdutoId)
             {
